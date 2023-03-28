@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,18 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django blog</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
     />
   </head>
-  <body>
-    <nav class="navbar is-danger">
-      <div class="navbar-brand">
-        <a href="/" class="navbar-item"></a>
-        <strong>turotial</strong>
+  <!-- Header Start -->
+  <header class="header-5">
+    <div class="header-inner">
+      <div class="logo">
+        <h2>Andy</h2>
       </div>
-    </nav>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <a href="#"><li class="header-nav-item select"></li></a>
+          <a href="#"><li class="header-nav-item select">About</li></a>
+          <a href="#"><li class="header-nav-item">Works</li></a>
+          <a href="#"><li class="header-nav-item">Contact</li></a>
+        </ul>
+        <div class="header-ham">
+          <div class="menu2"></div>
+          <div class="menu2"></div>
+          <div class="menu2"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Header End -->
+  <body>
     <section class="section">
       <div class="container">{% block content %} {% endblock %}</div>
     </section>
