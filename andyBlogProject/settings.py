@@ -119,7 +119,8 @@ USE_TZ = True
 
 # PROJECT_NAME = os.path.basename(BASE_DIR)
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_DIR = Path.joinpath(BASE_DIR, 'static')
 # STATIC_ROOT = '/var/www/{}/static'.format(PROJECT_NAME)
 # STATIC_ROOT = BASE_DIR, 'staticfiles'
 # STATICFILES_DIRS = (BASE_DIR / 'static')
