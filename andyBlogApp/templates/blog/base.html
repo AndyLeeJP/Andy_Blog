@@ -12,26 +12,47 @@
       href="{% static 'andyBlogApp/css/style.css' %}"
     />
   </head>
-
-
     <body>
       <div id="particles-js"></div>
       <div id="wrapper">
         <div class="wall">
-          <div class="logo">
-            <h2>Andy</h2>
-          </div>
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <a href="#"><li class="header-nav-item select">Articls</li></a>
-              <a href="#"><li class="header-nav-item select">About</li></a>
-              <a href="#"><li class="header-nav-item">Works</li></a>
-              <a href="#"><li class="header-nav-item">Contact</li></a>
-            </ul>
-          </nav>
+          <header class="header02">
+            <h1 class="header02-logo">Andy</h1>
+        
+            <nav class="header02-nav">
+                <ul class="header02-list">
+                  <li class="header02-item"><a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">Articles</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a></li>
+                  <li class="header02-item"><a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">About me</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a></li>
+                  <li class="header02-item"><a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">Works</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a></li>
+                  <li class="header02-item"><a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">Contact</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a></li>
+
+                </ul>
+            </nav>
+        </header>
+
           <div class="wall">
             <section class="section">
-              <div class="container">{% block content %} {% endblock %}</div>
+              <div class="">{% block content %} {% endblock %}</div>
             </section>
           </div>
         </div>
