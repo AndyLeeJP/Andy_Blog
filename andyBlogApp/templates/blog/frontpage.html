@@ -15,10 +15,8 @@
     <small>Posted at {{post.posted_date}}</small>
     <br />
     <div class="read">
-      <button class="btn">
-        <a class="readMore" href="{% url 'post_detail' post.slug %}"
-          >read more</a
-        >
+      <button class="btn readMore">
+        <a href="{% url 'post_detail' post.slug %}">read more</a>
       </button>
     </div>
   </div>

@@ -190,11 +190,9 @@ li {
 }
 
 .img {
-  /* margin-top: 1rem; */
   width: 300px;
   height: 200px;
   border-radius: 10px; /*角の丸み*/
-  /* text-align: left; */
 }
 
 .post_layout {
@@ -202,15 +200,6 @@ li {
   text-align: left;
   margin-left: 1rem;
 }
-
-/* .subtitle {
-  text-align: left;
-  margin-left: 1rem;
-} */
-
-/* p.break {
-  word-wrap: break-word;
-} */
 
 .sentences {
   display: block;
