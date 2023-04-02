@@ -53,9 +53,7 @@ body {
 }
 
 .header02-logo {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+  justify-content: center;
 }
 
 .header02-list {
@@ -177,32 +175,165 @@ li {
 }
 
 .post {
-  padding: 0.5em 1em;
+  /* padding: 0.5em 1em; */
   margin: 2em 0;
   font-weight: bold;
   color: #6091d3; /*文字色*/
   background: #fff;
   border: solid 3px #6091d3; /*線*/
   border-radius: 10px; /*角の丸み*/
+  display: flex;
 }
 .post p {
   margin: 0;
   padding: 0;
 }
 
-.block {
-  display: flex;
-}
-
 .img {
+  /* margin-top: 1rem; */
   width: 300px;
   height: 200px;
+  border-radius: 10px; /*角の丸み*/
   /* text-align: left; */
 }
 
-.sentences {
-  word-wrap: break-word;
+.post_layout {
+  width: 750px;
+  text-align: left;
+  margin-left: 1rem;
 }
-p.break {
+
+/* .subtitle {
+  text-align: left;
+  margin-left: 1rem;
+} */
+
+/* p.break {
   word-wrap: break-word;
+} */
+
+.sentences {
+  display: block;
+  width: 75ch;
+  font-family: "Courier New", Consolas, monospace;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.read {
+  text-align: right;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #e8e8e8;
+  --color: #afffff;
+  color: var(--color);
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.logoimg {
+  height: 15rem;
+  width: 15rem;
+}
+
+.place {
+  display: flex;
+  justify-content: center;
+}
+
+.contens {
+  padding-bottom: 1.5rem;
 }

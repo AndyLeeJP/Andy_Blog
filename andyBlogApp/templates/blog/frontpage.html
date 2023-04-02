@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %} {% block content %} {% for post in posts%}
 
-<div class="post block container">
+<div class="post">
   {% load static %}
   <link
     rel="stylesheet"
@@ -8,12 +8,19 @@
     href="{% static 'andyBlogApp/css/style.css' %}"
   />
   <img src="{% static 'andyBlogApp/images/js.png' %}" class="img" />
-  <div class="post">
+  <div class="post_layout">
     <h2 class="subtitle">{{post.title}}</h2>
+    <p>{{post.intro}}</p>
     <p class="sentences">{{post.body}}</p>
     <small>Posted at {{post.posted_date}}</small>
-    <p>{{post.intro}}</p>
-    <a href="{% url 'post_detail' post.slug %}">read more</a>
+    <br />
+    <div class="read">
+      <button class="btn">
+        <a class="readMore" href="{% url 'post_detail' post.slug %}"
+          >read more</a
+        >
+      </button>
+    </div>
   </div>
 </div>
 {% endfor %} {% endblock %}
