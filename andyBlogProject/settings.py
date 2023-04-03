@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "andyBlogApp"
+    "andyBlogApp",
+    'markdownx'
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'andyBlogProject.wsgi.application'
 
+# これはDjangoバージョン3.0以上の場合のみ記載すること
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+    
+# ファイルアップロード用
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

@@ -19,7 +19,8 @@ html {
 }
 
 .wall {
-  background-color: #d0e5e6;
+  /* background-color: #d0e5e6; */
+  background-color: white;
   width: 75%;
   margin-right: auto;
   margin-left: auto;
@@ -325,4 +326,9 @@ li {
 
 .contens {
   padding-bottom: 1.5rem;
+}
+
+.bodycontent {
+  text-align: left;
+  word-break: break-all;
 }
